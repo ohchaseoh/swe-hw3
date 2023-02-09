@@ -1,0 +1,118 @@
+<!--
+Name: Chase Ohmstede
+Class: CS341 Software Engineering
+Date: 1/20/23
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="hw3/public/stylesheet.css">
+
+<h1>Cheesecake Order Form</h1>
+
+</head>
+<body>
+
+<!-- Was going to do a wide selection of different cheesecake imgs, but it broke formatting -->
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg" width="182px" height="182px">
+
+<table id="table">
+
+   <tr>
+	<th>Quantity</th>
+	<th>Topping</th>
+   </tr>
+
+   <!-- declaring the form here, so all rows can access it -->
+   <form action=/action_page.php method="get">
+
+      <tr>
+	   <td></td> <!-- have to leave first cell of row blank for formatting -->
+	   <td>
+            <input class="flavor-input" type="radio" id="flavor" name="flavor" value="Plain">
+	      <label class="flavor-label" for="plain">Plain</label><br>
+	   </td>
+      </tr>
+
+      <tr>
+         <!-- dropdown menu for quantity -->
+	   <td width="60px">
+	      <select id="quantity">
+	         <option value="1">1</option>
+	         <option value="2">2</option>
+	         <option value="3">3</option>
+	         <option value="4">4</option>
+	         <option value="5">5</option>
+	         <option value="6">6</option>
+	         <option value="12">12</option>
+	      </select>
+	   </td>
+
+	   <td>
+            <input class="flavor-input" type="radio" id="flavor" name="flavor" value="Cherry">
+	      <label class="flavor-label" for="cherry">Cherry</label><br>
+	   </td>
+      </tr>
+
+      <tr>
+	   <td></td>
+   	   <td>
+            <input class="flavor-input" type="radio" id="flavor" name="flavor" value="Chocolate">
+	      <label class="flavor-label" for="chocolate">Chocolate</label><br>
+	   </td>
+      </tr>
+
+   </form>
+
+</table>
+
+<!-- textbox for notes goes here -->
+<p><label for="notes" id="notes">Notes:</label></p>
+<textarea id="notesArea" name="notes" rows="4" cols="50">Enter any special instructions here.</textarea>
+
+<!-- button for ordering -->
+<p><button type="button" id="orderButton">Order</button></p>
+
+<!-- previous orders (adding drop down w/ HW#2)-->
+<h3 id="historyHeader">Total Orders for
+
+	<!-- don't click these buttons! they're hyperlinks and WILL break -->
+	<div class="dropdown">
+  	<button onclick="myFunction()" class="dropbtn">Month</button>
+  		<div id="myDropdown" class="dropdown-content">
+    		<a href="Jan">Jan</a>
+    		<a href="Feb">Feb</a>
+    		<a href="Mar">Mar</a>
+    		<a href="Jan">Jan</a>
+    		<a href="Feb">Feb</a>
+    		<a href="Mar">Mar</a>
+    		<a href="Jan">Jan</a>
+    		<a href="Feb">Feb</a>
+    		<a href="Mar">Mar</a>
+    		<a href="Jan">Jan</a>
+    		<a href="Feb">Feb</a>
+    		<a href="Mar">Mar</a>
+  		</div>
+	</div>
+	
+</h3>
+
+<b><label id="orderSent">Thank you! Your order has been placed!</label></b>
+
+<hr style="width:30%;text-align:left;margin-left:0%;"></hr>
+
+<!-- list for cakes -->
+<ul id="history">
+   <li>11 cherry</li>
+   <li>17 chocolate</li>
+   <li>31 plain</li>
+</ul>
+
+<p><label id="orderFinal">Your Order: </label></p>
+<p><label id="orderFinalNotes">Notes: </label></p>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+/*
+Name: Chase Ohmstede
+Class: CS341 Software Engineering
+Date: 1/20/23
+*/
+
+/* I spent most of my time making this sick banner */
+h1 {
+   font-family: "Lucida Handwriting", "Brush Script M7", cursive;
+   width: 100%;
+   position: absolute;
+   background: #ffb6c1;
+   padding: 8px;
+   line-height: 1em;
+   top: 0px;
+   font-size: 2em;
+   display: block;
+   font-weight: 200;
+   text-transform: uppercase;
+   text-align: center;
+   margin-left: -8px;
+   box-shadow: 0 8px 6px -6px rgba(0,0,0,0.4);
+}
+
+/* added color/designs to body and table */
+
+body {
+   background: #ffdae0;
+}
+
+img {
+   padding-top:80px;
+}
+
+table {
+   border-style: dotted;
+   background: #b6fff4;
+   width: 200px;
+}
+
+/* changed font style for labels */
+label {
+   font-family: Helvetica, Arial, sans-serif;
+}
+
+/** below is for HW#2
+ *  css citation: https://www.w3schools.com/howto/howto_css_dropdown.asp
+ **/
+
+/* for each dropdown button */
+.dropbtn {
+   background-color: #b6fff4; 
+   color: darkslategrey;
+   padding: 16px;
+   font-size: 16px;
+   border: none;
+}
+
+/* outer dropdown container */
+.dropdown {
+   position: relative;
+   display: inline-block;
+   background-color: darkslategrey;
+}
+
+.dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #f1f1f1;
+   min-width: 100%;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: block;
+}
+
+.dropdown-content a {
+   color: darkslategrey;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+}
+
+/* changing color of links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #2ea593;}
